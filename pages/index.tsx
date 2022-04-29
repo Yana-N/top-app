@@ -1,62 +1,20 @@
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import React from 'react';
+import {Button, Htag, Ptag, Tag} from '../components';
 
 export default function Home(): JSX.Element {
-  return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </div>
-  );
+	return (
+		<div>
+			<Htag tag="h1">test</Htag>
+			<Button appearance="primary" arrow="down">test primary</Button>
+			<Button appearance="ghost" arrow="right">test ghost</Button>
+			<Ptag size="s">test text small</Ptag>
+			<Ptag>test text medium</Ptag>
+			<Ptag size="l">test text large</Ptag>
+			<Tag size="s" color="ghost">text</Tag>
+			<Tag size="m" color="red">text</Tag>
+			<Tag size="m" color="grey">text</Tag>
+			<Tag size="m" color="green">text</Tag>
+			<Tag size="m" color="primary">text</Tag>
+		</div>
+	);
 }
